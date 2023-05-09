@@ -1,0 +1,407 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
+    background-image: linear-gradient(to bottom, #FFF8F8, #FFFFFF);
+}
+h2 {
+    font-family: "Red Hat Text";
+    font-weight: 700;
+    font-size: 29px;
+    color: #035755;
+}
+h3 {
+    font-family: "Red Hat Text";
+    font-weight: 700;
+    font-size: 18px;
+    color: #FA5652
+}
+p {
+    font-family: "gelion";
+    font-weight: 300;
+    font-size: 18px;
+    color: #4B4F51;
+}
+.section_block {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*********************/
+/*   SECTION-TITLE   */
+/*********************/
+.section-title {
+    width: 600px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.section-title h2 {
+    font-size: 40px;
+    line-height: 75px;
+}
+.section-title h3 {
+    font-size: 20px;
+}
+.section-title p {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+/*********************/
+/*      HEADER       */
+/*********************/
+.header {
+    height: 128px;
+    max-width: 1200px;
+}
+
+/*********************/
+/*   MAIN SECTION    */
+/*********************/
+.main-section {
+    height: 630px;
+    max-width: 1200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.title-main {
+    height: 300px;
+    width: 85%;
+    margin-top: 10%;
+}
+.title-main h2 {
+    width: 100%;
+    font-size: 40px;
+    line-height: 50px;
+}
+.title-main h3 {
+    width: 100%;
+    font-size: 23px;
+    line-height: 35px;
+}
+.title-main p {
+    width: 100%;
+    font-size: 20px;
+    line-height: 35px;
+}
+.title-main__box-button {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+}
+.title-main__button {
+    width: 195px;
+    height: 60px;
+    background: #FB4C47;
+    border: 0;
+    border-radius: 65px;
+    font-family: "gelion";
+    font-weight: 700;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+.img_main_girl {
+    width: 93%;
+    height: auto;
+}
+#main_title_virus_1 {
+    width: 12%;
+    height: auto;
+    position: absolute;
+    top: 8%;
+}
+#main_title_virus_2 {
+    width: 5%;
+    height: auto;
+    position: absolute;
+    z-index: -9999;
+    top: 25%;
+    left: 65%;
+}
+#main_title_virus_3 {
+    width: 10%;
+    height: auto;
+    position: absolute;
+    z-index: -9999;
+    top: 7%;
+    left: 94%;
+}
+
+/***********************/
+/* CORONAVIRUS SECTION */
+/***********************/
+.coronavirus {
+    height: 600px;
+    max-width: 1400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+#coronavirus_back {
+    width: 90%;
+    height: auto;
+}
+#coronavirus_red {
+    width: 18%;
+    height: auto;
+    position: absolute;
+    /*z-index: -9999;*/
+    top: 30%;
+    left: 9%;
+}
+#coronavirus_yellow {
+    width: 12%;
+    height: auto;
+    position: absolute;
+    /*z-index: -9999;*/
+    top: 49%;
+    left: 21%;
+}
+#coronavirus_green {
+    width: 13%;
+    height: auto;
+    position: absolute;
+    /*z-index: -9999;*/
+    top: 29%;
+    left: 25%;
+}
+.title-coronavirus {
+    height: 300px;
+    width: 70%;
+    /*margin-top: 10%;*/
+}
+.title-coronavirus h2 {
+    width: 100%;
+    font-size: 37px;
+    line-height: 45px;
+}
+.title-coronavirus h3 {
+    width: 100%;
+    font-size: 20px;
+    line-height: 40px;
+}
+.title-coronavirus p {
+    width: 100%;
+    font-size: 19px;
+    line-height: 30px;
+}
+.title-coronavirus__box-button {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+.title-coronavirus__button {
+    width: 155px;
+    height: 60px;
+    background: #FFCFCF;
+    border: 0;
+    border-radius: 65px;
+    font-family: "gelion";
+    font-weight: 700;
+    font-size: 16px;
+    color: #FA5652;
+}
+
+/***********************/
+/* CONTAGIONS SECTION */
+/***********************/
+.contagion {
+    /*height: 1850px;*/
+    max-width: 1200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: center;*/
+}
+.box-cards {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.card {
+    width: 30%;
+    height: 450px;
+    background-color: #FFFFFF;
+    border-bottom: 8px solid #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 17px 50px #E5DDDD;
+}
+.card:hover {
+    border-bottom: 8px solid #FB4C47;
+}
+.card__top_block {
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card__bottom_block {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.card__top_block img {
+    width: 65%;
+    height: auto;
+}
+.card__bottom_block h2 {
+    /*width: 80%;*/
+    /*text-align: center;*/
+    font-size: 28px;
+
+}
+.card__bottom_block p {
+    /*width: 80%;*/
+    /*text-align: center;*/
+    margin: 20px;
+}
+
+
+/***********************/
+/* SYMPTOMS SECTION */
+/***********************/
+.symptoms {
+    /*height: 600px;*/
+    max-width: 1200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: center;*/
+}
+.symptoms_content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.symptoms_content__left_box {
+    height: 590px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /*padding-top: 45px;*/
+}
+.symptoms_content__center_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.symptoms_content__right_box {
+    height: 590px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /*padding-top: 45px;*/
+}
+.symptoms_content__center_box img {
+    width: 80%;
+}
+.symptoms_content__round {
+    height: 140px;
+    width: 140px;
+    border-radius: 90px;
+    background-color: #FFE1E2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.symptoms_content p {
+    font-family: "gelion";
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #FF383D;
+    font-size: 20px;
+    text-align: center;
+}
+#symptoms_line_fever {
+    width: 30%;
+    position: absolute;
+    top: 44%;
+    left: 19%;
+}
+#symptoms_line_throat {
+    width: 32%;
+    position: absolute;
+    top: 62%;
+    left: 18.5%;
+}
+#symptoms_line_dypsnoea {
+    width: 38%;
+    position: absolute;
+    top: 76%;
+    left: 18%;
+}
+#symptoms_line_headache {
+    /*width: 27%;*/
+    position: absolute;
+    top: 41%;
+    left: 55%;
+}
+#symptoms_line_nose {
+    /*width: 31%;*/
+    position: absolute;
+    top: 57%;
+    left: 53%;
+}
+#symptoms_line_chills {
+    /*width: 20%;*/
+    position: absolute;
+    top: 90%;
+    left: 60%;
+}
+#symptoms_img_fever {
+    width: 8%;
+    position: absolute;
+    top: 33.5%;
+    left: 7.5%;
+}
+#symptoms_img_throat {
+    width: 8%;
+    position: absolute;
+    top: 57.8%;
+    left: 0.5%;
+}
+#symptoms_img_dypsnoea {
+    width: 8%;
+    position: absolute;
+    top: 82%;
+    left: 7.5%;
+}
+
+
+/***********************/
+/* SHOULD DO SECTION */
+/***********************/
+.what_should_we_do {
+    height: 600px;
+    max-width: 1200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+}
