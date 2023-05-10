@@ -75,8 +75,62 @@ p {
 /*      HEADER       */
 /*********************/
 .header {
-    height: 128px;
+    height: 120px;
     max-width: 1200px;
+    /*background-color: #035755;*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+.header__box {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__logo_box {
+    width: 170px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__logo_link {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.header__nav {
+
+}
+.header__nav_links {
+    width: 630px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.header__nav_link {
+    text-decoration: none;
+    color: #035755;
+    font-family: "gelion";
+    font-weight: 500;
+    font-size: 18px;
+}
+.header__nav_link:hover {
+    color: #FB4C47;
+}
+.header__nav_link_contact {
+    text-decoration: none;
+    color: #FF383D;
+    font-family: "gelion";
+    font-weight: 500;
+    font-size: 18px;
+    border: 2px solid #FB4C47;
+    border-radius: 46px;
+    padding: 14px 38px 14px 38px;
 }
 
 /*********************/
@@ -490,7 +544,7 @@ p {
 /***********************/
 .covid_map {
     max-width: 1200px;
-    height: 800px;
+    height: 650px;
     position: relative;
     display: flex;
     align-items: center;
@@ -617,4 +671,69 @@ g path {
 }
 .map_block__stat h4 {
     padding-right: 27px;
+}
+
+/***********************/
+/* EMAIL FORM SECTION */
+/***********************/
+.email_form {
+    max-width: 1200px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*background-color: #035755;*/
+}
+.email_form__title {
+    width: 500px;
+    text-align: center;
+}
+.email_form__title h2 {
+    font-size: 40px;
+    line-height: 45px;
+}
+.email_form__form_box {
+    height: 200px;
+}
+
+#input_email {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.input-container {
+    position: relative;
+    width: 500px;
+    height: 70px;
+    display: flex;
+}
+
+#email {
+    width: 100%;
+    border-radius: 27px;
+    box-shadow: 0 17px 50px #E5DDDD;
+    text-align: center;
+    font-size: 16px;
+    padding-right: 60px;
+    border: white;
+}
+#email[type="email"]::placeholder {
+    font-size: 16px;
+}
+#input_email button[type="submit"] {
+    position: absolute;
+    top: 10%;
+    right: 3%;
+    width: 24%;
+    height: 78%;
+    background-color: #FB4C47;
+    border: white;
+    border-radius: 23px;
+    font-family: "gelion";
+    font-weight: 500;
+    font-size: 17px;
+    color: white;
 }

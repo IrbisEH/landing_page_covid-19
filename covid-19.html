@@ -10,12 +10,29 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./static/favicon.ico">
   <script src="./covid-19.js"></script>
 </head>
 <body>
   <div class="background_color_wrapper">
     <header class="header">
-
+      <div class="header__box">
+        <div class="header__logo_box">
+          <div class="header__img_header">
+            <a class="header__logo_link" href="#"><img alt="covid" src="./static/logo.svg"></a>
+          </div>
+          <a class="header__logo_link" href="#"><h3>covid-19</h3></a>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__nav_links">
+            <li><a class="header__nav_link" href="#">Overview</a></li>
+            <li><a class="header__nav_link" href="#">Contagion</a></li>
+            <li><a class="header__nav_link" href="#">Symptoms</a></li>
+            <li><a class="header__nav_link" href="#">Prevention</a></li>
+            <li><a class="header__nav_link_contact" href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <section class="main-section">
       <div class="section_block">
@@ -327,7 +344,13 @@
       </div>
     </div>
     <div class="email_form__form_box">
-
+      <form id="input_email">
+        <div class="input-container">
+          <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+          <button id="send-email-btn" type="submit">Send</button>
+        </div>
+        <span id="emailValidationMessage" style="display: none; color: red;">Incorrect email</span>
+      </form>
     </div>
   </section>
 </body>
