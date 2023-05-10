@@ -392,6 +392,24 @@ p {
     top: 82%;
     left: 7.5%;
 }
+#symptoms_img_headache {
+    width: 8%;
+    position: absolute;
+    top: 33.5%;
+    left: 84.5%;
+}
+#symptoms_img_nose {
+    width: 8%;
+    position: absolute;
+    top: 57.8%;
+    left: 91.5%;
+}
+#symptoms_img_chills {
+    width: 8%;
+    position: absolute;
+    top: 82%;
+    left: 84.7%;
+}
 
 
 /***********************/
