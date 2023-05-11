@@ -91,38 +91,40 @@ p {
     align-items: center;
     justify-content: space-between;
 }
-.header__logo_box {
+.logo_box {
     width: 170px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
-.header__logo_link {
+.logo_box img {
+    padding-top:10px;
+}
+.logo_box__link {
     text-decoration: none;
     text-transform: uppercase;
 }
 .header__nav {
-
-}
-.header__nav_links {
     width: 630px;
+}
+.nav__links {
     list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.header__nav_link {
+.nav__link {
     text-decoration: none;
     color: #035755;
     font-family: "gelion";
     font-weight: 500;
     font-size: 18px;
 }
-.header__nav_link:hover {
+.nav__link:hover {
     color: #FB4C47;
 }
-.header__nav_link_contact {
+.nav__link_contact {
     text-decoration: none;
     color: #FF383D;
     font-family: "gelion";
@@ -612,6 +614,7 @@ g path {
 .map_block__left_button {
     width: 50%;
     height: 100%;
+    cursor: pointer;
     background-color: #FFFFFF;
     border-radius: 10px 0 0 10px;
     box-shadow: 0 5px 50px rgba(90, 1, 0, 0.1);
@@ -622,6 +625,7 @@ g path {
 .map_block__right_button {
     width: 50%;
     height: 100%;
+    cursor: pointer;
     background-color: #FFFFFF;
     border-radius: 0 10px 10px 0;
     box-shadow: 0 5px 50px rgba(90, 1, 0, 0.1);
@@ -729,6 +733,7 @@ g path {
     right: 3%;
     width: 24%;
     height: 78%;
+    cursor: pointer;
     background-color: #FB4C47;
     border: white;
     border-radius: 23px;
@@ -736,4 +741,49 @@ g path {
     font-weight: 500;
     font-size: 17px;
     color: white;
+}
+
+/*********************/
+/*      footer       */
+/*********************/
+.footer {
+    height: 200px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.footer__box {
+    min-width: 1200px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.footer__rights-box {
+    width: 500px;
+}
+.footer_nav {
+    width:450px;
+    padding: 0 190px 0 190px;
+}
+.footer_social_box {
+    width: 170px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer_social_box svg {
+    cursor: pointer;
+}
+.footer_social_box path:hover {
+    fill: #FF383D;
+}
+.footer__rights-box {
+    width: 100%;
+    text-align: center;
 }
