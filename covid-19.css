@@ -8,7 +8,7 @@ html {
 h2 {
     font-family: "Red Hat Text";
     font-weight: 700;
-    font-size: 29px;
+    font-size: 33px;
     color: #035755;
 }
 h3 {
@@ -30,7 +30,6 @@ p {
     color: #4B4F51;
 }
 body {
-    /*width: 100%;*/
     display: flex;
     justify-content: center;
     background: linear-gradient(to bottom, #FFF8F8, #FFFFFF, #FFF8F8);
@@ -39,7 +38,8 @@ body {
     max-width: 1200px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    /*align-items: center;*/
 }
 
 @media (max-width: 1320px) {
@@ -47,12 +47,14 @@ body {
         width:90%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        /*align-items: center;*/
     }
 }
+
 /*********************/
 /*      HEADER       */
 /*********************/
+
 .header {
     width: 100%;
     height: 105px;
@@ -63,7 +65,6 @@ body {
     justify-content: space-between;
 
 }
-
 .logo_box {
     width: 170px;
     display: flex;
@@ -109,47 +110,30 @@ body {
 }
 
 /*********************/
-/*   MAIN SECTION    */
+/*   MAIN BLOCKS    */
 /*********************/
-.main-section {
-    height: 12%;
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
 
-.main-section__text_block {
+.main__text_block {
     width: 50%;
     display: flex;
     justify-content: start;
     align-items: center;
 }
-.main-section__wrapper_text {
-    padding-top: 2%;
-    max-width: 560px;
+.main__wrapper_text {
+    padding-top: 6%;
+    padding-left: 5%;
+    max-width: 520px;
 }
-.title-main h2 {
-    font-size: 40px;
-    line-height: 50px;
-}
-.title-main h3 {
-    font-size: 23px;
-    line-height: 35px;
-}
-.title-main p {
-    font-size: 20px;
-    line-height: 35px;
-}
-.title-main__box-button {
-    height: 130px;
+.main__button_box {
+    max-height: 550px;
     display: flex;
     align-items: center;
+    background-color: #035755;
 }
-.title-main__button {
-    width: 195px;
-    height: 60px;
-    cursor: pointer;
+.main__button {
+    min-width: 180px;
+    padding: 20px 35px 20px 35px;
+    margin-top: 5%;
     background: #FB4C47;
     border: 0;
     border-radius: 65px;
@@ -157,28 +141,80 @@ body {
     font-weight: 700;
     font-size: 16px;
     color: #FFFFFF;
+    cursor: pointer;
 }
-.main-section__img_block {
+.main__img_block {
     width: 50%;
-    /*height: 100%;*/
     display: flex;
-    justify-content: end;
     align-items: center;
 }
-.main-section__img {
-    width: 100%;
+.main__img {
+    width: 96%;
     height: auto;
 }
 
-/***********************/
-/* CORONAVIRUS SECTION */
-/***********************/
-.coronavirus {
-    height: 600px;
-    max-width: 1400px;
+/*************************/
+/* COVID-19 MAIN SECTION */
+/*************************/
+
+.covid-19_main {
+    height: 15%;
+    width: 100%;
     position: relative;
     display: flex;
     justify-content: center;
+}
+.covid-19_main .main__img_block {
+    justify-content: end;
+}
+#img_virus_1 {
+    width: 12%;
+    height: auto;
+    position: absolute;
+    z-index: -9999;
+    top: 6%;
+    left: 46%;
+}
+#img_virus_2 {
+    width: 5%;
+    height: auto;
+    position: absolute;
+    z-index: -9999;
+    top: 25%;
+    left: 65%;
+}
+#img_virus_3 {
+    width: 9%;
+    height: auto;
+    position: absolute;
+    z-index: -9999;
+    top: 5%;
+    left: 94%;
+}
+
+/********************************/
+/* OVERVIEW CORONAVIRUS SECTION */
+/********************************/
+
+.overview_coronavirus {
+    height: 10%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.overview_coronavirus .main__img_block {
+    justify-content: start;
+}
+.overview_coronavirus .main__img {
+    width: 80%;
+}
+.overview_coronavirus .main__text_block {
+    justify-content: end;
+}
+.overview_coronavirus .main__button {
+    background: #FFCFCF;
+    color: #FA5652;
 }
 #coronavirus_back {
     width: 77%;
@@ -189,7 +225,6 @@ body {
     width: 18%;
     height: auto;
     position: absolute;
-    /*z-index: -9999;*/
     top: 30%;
     left: 9%;
 }
@@ -197,7 +232,6 @@ body {
     width: 12%;
     height: auto;
     position: absolute;
-    /*z-index: -9999;*/
     top: 49%;
     left: 21%;
 }
@@ -205,91 +239,41 @@ body {
     width: 13%;
     height: auto;
     position: absolute;
-    /*z-index: -9999;*/
     top: 29%;
     left: 25%;
 }
-.title-coronavirus {
-    height: 300px;
-    width: 70%;
-    /*margin-top: 10%;*/
-}
-.title-coronavirus h2 {
-    width: 100%;
-    font-size: 37px;
-    line-height: 45px;
-}
-.title-coronavirus h3 {
-    width: 100%;
-    font-size: 20px;
-    line-height: 40px;
-}
-.title-coronavirus p {
-    width: 100%;
-    font-size: 19px;
-    line-height: 30px;
-}
-.title-coronavirus__box-button {
-    width: 100%;
-    height: 120px;
-    display: flex;
-    align-items: center;
-}
-.title-coronavirus__button {
-    width: 155px;
-    height: 60px;
-    cursor: pointer;
-    background: #FFCFCF;
-    border: 0;
-    border-radius: 65px;
-    font-family: "gelion";
-    font-weight: 700;
-    font-size: 16px;
-    color: #FA5652;
-}
-
 
 /*********************/
 /*   SECTION-TITLE   */
 /*********************/
-.section-title {
-    width: 100%;
-    padding-top: 100px;
-    padding-bottom: 50px;
+
+.section_title {
+    height: 200px;
     display: flex;
-    align-content: center;
     justify-content: center;
+    align-items: center;
+}
+.section_title__wrapper {
+    height: 80%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
-.section-title__box {
-    width: 55%;
-}
-.section-title h2 {
-    font-size: 40px;
-    line-height: 75px;
-}
-.section-title h3 {
-    font-size: 20px;
-}
-.section-title p {
-    font-size: 18px;
-    line-height: 30px;
-}
-
 
 /***********************/
 /* CONTAGIONS SECTION */
 /***********************/
+
 .contagion {
-    max-width: 1200px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.box-cards {
+    height: 18%;
     width: 100%;
-    height: 500px;
+}
+.cards_box {
+    width: 100%;
+    height: 62%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -297,91 +281,102 @@ body {
 }
 .card {
     width: 30%;
-    height: 450px;
+    height: 100%;
     background-color: #FFFFFF;
     border-bottom: 8px solid #FFFFFF;
     border-radius: 8px;
     box-shadow: 0 17px 50px #E5DDDD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .card:hover {
     border-bottom: 8px solid #FB4C47;
 }
 .card__top_block {
-    height: 60%;
+    height: 65%;
+    width:90%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.card__bottom_block {
-    height: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
-.card__top_block img {
-    width: 65%;
+.card__img {
+    width: 75%;
     height: auto;
 }
-.card__bottom_block h2 {
-    /*width: 80%;*/
-    /*text-align: center;*/
-    font-size: 28px;
-
+.card__bottom_block {
+    height: 35%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    text-align: center;
 }
-.card__bottom_block p {
-    /*width: 80%;*/
-    /*text-align: center;*/
-    margin: 20px;
+.card h2 {
+    font-family: "gelion";
+    font-weight: 500;
+    line-height: 2em;
+    padding-bottom: 3%;
 }
-
+@media (max-width: 1150px) {
+    .card h2 {
+        font-size: 24px;
+    }
+}
+@media (max-width: 1300px) {
+    .card p {
+        font-size: 15px;
+    }
+}
 
 /***********************/
 /* SYMPTOMS SECTION */
 /***********************/
+
 .symptoms {
-    max-width: 1200px;
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.symptoms_content {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.symptoms_content__left_box {
+    height: 90%;
+    width: 20%;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.symptoms_content {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.symptoms_content__left_box {
-    height: 590px;
-    width: 180px;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    /*padding-top: 45px;*/
 }
 .symptoms_content__center_box {
+    height: 100%;
+    width: 60%;
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-.symptoms_content__right_box {
-    height: 590px;
-    width: 180px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    /*padding-top: 45px;*/
 }
 .symptoms_content__center_box img {
     width: 80%;
 }
+.symptoms_content__right_box {
+    height: 90%;
+    width: 20%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
 .symptoms_content__round {
-    height: 140px;
-    width: 140px;
+    height: 23%;
+    width: 49%;
     border-radius: 90px;
     background-color: #FFE1E2;
     display: flex;
@@ -389,149 +384,132 @@ body {
     align-items: center;
 }
 .symptoms_content p {
+    width: 90%;
     font-family: "gelion";
     font-weight: 500;
     text-transform: uppercase;
     color: #FF383D;
-    font-size: 20px;
+    font-size: 14px;
     text-align: center;
 }
-#symptoms_line_fever {
-    width: 30%;
+/*left side*/
+#symptoms_img_fever {
+    width: 33%;
     position: absolute;
-    top: 44%;
-    left: 19%;
+    top: -2.8%;
+    left: 47%;
 }
-#symptoms_line_throat {
+#symptoms_img_throat {
+    width: 33%;
+    position: absolute;
+    top: 35.8%;
+    left: 20%;
+}
+#symptoms_img_dypsnoea {
+    width: 33%;
+    position: absolute;
+    top: 74.5%;
+    left: 47%;
+}
+/*right side*/
+#symptoms_img_headache {
+    width: 33%;
+    position: absolute;
+    top: -2.8%;
+    left: 20.5%;
+}
+#symptoms_img_nose {
+    width: 33%;
+    position: absolute;
+    top: 35.8%;
+    left: 47.8%;
+}
+#symptoms_img_chills {
+    width: 33%;
+    position: absolute;
+    top: 74.3%;
+    left: 20.5%;
+}
+/*left side*/
+#symptoms_line_fever {
     width: 32%;
     position: absolute;
-    top: 62%;
-    left: 18.5%;
+    top: 14%;
+    left: 17%;
+}
+#symptoms_line_throat {
+    width: 33%;
+    position: absolute;
+    top: 42%;
+    left: 17%;
 }
 #symptoms_line_dypsnoea {
     width: 38%;
     position: absolute;
-    top: 76%;
-    left: 18%;
+    top: 60%;
+    left: 17%;
 }
+/*right side*/
 #symptoms_line_headache {
-    /*width: 27%;*/
+    width: 26%;
     position: absolute;
-    top: 41%;
-    left: 55%;
+    top: 14%;
+    left: 56%;
 }
 #symptoms_line_nose {
-    /*width: 31%;*/
+    width: 30%;
     position: absolute;
-    top: 57%;
-    left: 53%;
+    top: 35%;
+    left: 52.4%;
 }
 #symptoms_line_chills {
-    /*width: 20%;*/
+    width: 22%;
     position: absolute;
-    top: 90%;
-    left: 60%;
-}
-#symptoms_img_fever {
-    width: 8%;
-    position: absolute;
-    top: 33.5%;
-    left: 7.5%;
-}
-#symptoms_img_throat {
-    width: 8%;
-    position: absolute;
-    top: 57.8%;
-    left: 0.5%;
-}
-#symptoms_img_dypsnoea {
-    width: 8%;
-    position: absolute;
-    top: 82%;
-    left: 7.5%;
-}
-#symptoms_img_headache {
-    width: 8%;
-    position: absolute;
-    top: 33.5%;
-    left: 84.5%;
-}
-#symptoms_img_nose {
-    width: 8%;
-    position: absolute;
-    top: 57.8%;
-    left: 91.5%;
-}
-#symptoms_img_chills {
-    width: 8%;
-    position: absolute;
-    top: 82%;
-    left: 84.7%;
+    top: 83%;
+    left: 60.3%;
 }
 
+/***********************/
+/*     PREVENTION      */
+/***********************/
 
-/***********************/
-/* SHOULD DO SECTION */
-/***********************/
-.what_should_we_do {
-    max-width: 1200px;
-    position: relative;
+.prevention {
+    height: 40%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
-.should_do__block {
+.prevention__block {
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    /*align-items: center;*/
 }
-.should_do__block_side {
+.prevention__block_side {
     width: 50%;
     display: flex;
     justify-content: center;
 }
-.should_do__info_block {
-    width: 550px;
+.prevention__info_block {
+    width: 85%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-}
-.should_do__num_block {
-    width: 12%;
-}
-.should_do__info_text_block {
-    width: 85%;
-    padding-left: 30px;
-}
-.should_do__num {
-    width: 70px;
-    height: 70px;
-    border-radius: 40px;
-    background-color: #fee6e5;
-    display: flex;
-    justify-content: center;
     align-items: center;
 }
-.should_do__num h2 {
-    font-size: 32px;
-    color: #FA5652;
+.prevention__num_block {
+    width: 30%;
+
 }
-.should_do__info_text_block {
-    padding-top: 15px;
+.prevention__text_block {
+    width: 70%;
 }
-.should_do__info_text_block h2 {
-    padding-bottom: 15px;
-}
-.should_do__block_side img {
-    width: 60%;
-}
-#block_2 {
-    flex-direction: row-reverse;
-}
-#block_4 {
-    flex-direction: row-reverse;
-}
+
+/*#block_2 {*/
+/*    flex-direction: row-reverse;*/
+/*}*/
+/*#block_4 {*/
+/*    flex-direction: row-reverse;*/
+/*}*/
 
 /***********************/
 /* COVID MAP SECTION */
@@ -781,31 +759,7 @@ g path {
 }
 
 
-/*********************/
-/*     virus svg     */
-/*********************/
-#img_virus_1 {
-    width: 12%;
-    height: auto;
-    position: absolute;
-    top: 8%;
-}
-#img_virus_2 {
-    width: 5%;
-    height: auto;
-    position: absolute;
-    z-index: -9999;
-    top: 25%;
-    left: 65%;
-}
-#img_virus_3 {
-    width: 10%;
-    height: auto;
-    position: absolute;
-    z-index: -9999;
-    top: 7%;
-    left: 94%;
-}
+
 #img_virus_4 {
     width: 30%;
     opacity: 40%;
