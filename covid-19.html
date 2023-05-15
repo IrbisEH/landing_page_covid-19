@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Covid-19</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="./covid-19.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,12 +17,10 @@
 <body>
   <div class="body_wrapper">
     <header class="header">
-        <div class="logo_box">
-          <div class="logo_box__img">
-            <a class="logo_box__link" href="#"><img alt="covid" src="./static/logo.svg"></a>
-          </div>
-          <a class="logo_box__link" href="#"><h3>covid-19</h3></a>
-        </div>
+        <a class="logo_box__link" href="#">
+          <img class="logo_box__img" alt="covid_logo" src="./static/logo.svg">
+          <h3>covid-19</h3>
+        </a>
         <nav class="header__nav">
           <ul class="nav__links">
             <li><a class="nav__link" href="#overview">Overview</a></li>
@@ -38,7 +37,9 @@
           <h3>COVID-19 alert</h3>
           <h2>Stay At Home Quarantine To Stop Corona Virus</h2>
           <p>There is no specific medicine to prevent or treat coronavirus disease (COVID-19). People may need supportive care to.</p>
-          <a href="#contact"><button class="main__button">Let Us Help</button></a>
+          <div class="main__button_wrapper">
+            <button class="main__button">Let Us Help</button>
+          </div>
         </div>
       </div>
       <div class="main__img_block">
@@ -50,7 +51,7 @@
     </section>
     <section id="overview" class="overview_coronavirus">
       <div class="main__img_block">
-        <img class="main__img" src="./static/coronavirus_back.svg">
+        <img id="coronavirus_back" class="main__img" src="./static/coronavirus_back.svg">
         <img id="coronavirus_red" src="./static/coronavirus_red.svg">
         <img id="coronavirus_yellow" src="./static/coronavirus_yellow.svg">
         <img id="coronavirus_green" src="./static/coronavirus_green.svg">
@@ -60,7 +61,9 @@
           <h3>What Is Covid-19</h3>
           <h2>Coronavirus</h2>
           <p>Corona viruses are a type of virus. There are many different kinds, and some cause disease. A newly identified type has caused a recent outbreak of respiratory illness now called COVID-19.Lauren Sauer, M.S., the director of operations with the Johns Hopkins Office of Critical Event Preparedness and Response</p>
-          <a href="#symptoms"><button class="main__button">Learn More</button></a>
+          <div class="main__button_wrapper">
+            <button class="main__button">Learn More</button>
+          </div>
         </div>
       </div>
     </section>
@@ -101,8 +104,8 @@
           </div>
         </div>
       </div>
-  <!--    <img id="img_virus_4" src="./static/virus.svg">-->
-  <!--    <img id="img_virus_5" src="./static/virus.svg">-->
+      <img id="img_virus_4" src="./static/virus.svg">
+      <img id="img_virus_5" src="./static/virus.svg">
     </section>
     <section id="symptoms" class="symptoms">
       <div class="section_title">
@@ -152,11 +155,13 @@
         </div>
       </div>
       <div id="block_1" class="prevention__block">
-        <div class="prevention__block_side">
-          <div class="prevention__info_block">
+        <div class="prevention__info_block">
+          <div class="prevention__info_wrapper">
             <div class="prevention__num_block">
               <div class="prevention__num">
-                <h2>01</h2>
+                <div class="prevention__num_wrapper">
+                  <h2>01</h2>
+                </div>
               </div>
             </div>
             <div class="prevention__text_block">
@@ -165,15 +170,15 @@
             </div>
           </div>
         </div>
-        <div class="prevention__block_side">
+        <div class="prevention__img_block">
           <img class="prevention__img" src="./static/should_do_img_1.svg">
         </div>
       </div>
       <div id="block_2" class="prevention__block">
-        <div class="prevention__block_side">
-          <div class="prevention__info_block">
+        <div class="prevention__info_block">
+          <div class="prevention__info_wrapper">
             <div class="prevention__num_block">
-              <div class="prevention__num">
+              <div class="prevention__num_wrapper">
                 <h2>02</h2>
               </div>
             </div>
@@ -183,15 +188,15 @@
             </div>
           </div>
         </div>
-        <div class="prevention__block_side">
+        <div class="prevention__img_block">
           <img class="prevention__img" src="./static/should_do_img_2.svg">
         </div>
       </div>
       <div id="block_3" class="prevention__block">
-        <div class="prevention__block_side">
-          <div class="prevention__info_block">
+        <div class="prevention__info_block">
+          <div class="prevention__info_wrapper">
             <div class="prevention__num_block">
-              <div class="prevention__num">
+              <div class="prevention__num_wrapper">
                 <h2>03</h2>
               </div>
             </div>
@@ -201,15 +206,15 @@
             </div>
           </div>
         </div>
-        <div class="prevention__block_side">
+        <div class="prevention__img_block">
           <img class="prevention__img" src="static/should_do_img_3.svg">
         </div>
       </div>
       <div id="block_4" class="prevention__block">
-        <div class="prevention__block_side">
-          <div class="prevention__info_block">
+        <div class="prevention__info_block">
+          <div class="prevention__info_wrapper">
             <div class="prevention__num_block">
-              <div class="prevention__num">
+              <div class="prevention__num_wrapper">
                 <h2>04</h2>
               </div>
             </div>
@@ -219,120 +224,112 @@
             </div>
           </div>
         </div>
-        <div class="prevention__block_side">
+        <div class="prevention__img_block">
           <img class="prevention__img" src="./static/should_do_img_4.svg">
         </div>
       </div>
     </section>
     <section class="covid_map">
-<!--      <div class="map_block">-->
-<!--        <div class="map_block__map">-->
-<!--          <object id="map_svg" type="image/svg+xml" data="./static/world-map.svg"></object>-->
-<!--        </div>-->
-<!--        <div class="map_block__control_panel">-->
-<!--          <div class="map_block__wrapper">-->
-<!--            <div class="map_block__title">-->
-<!--              <div class="map_block__title_text">-->
-<!--                <h4>-->
-<!--                  Live Report-->
-<!--                </h4>-->
-<!--              </div>-->
-<!--              <div class="map_block__title_buttons">-->
-<!--                <div class="map_block__left_button">-->
-<!--                  <svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--                    <path d="M9.34311 16.6862L2 9.34311L9.34311 2" stroke="#A2A5B2" stroke-width="2.85" stroke-linecap="round" stroke-linejoin="round"/>-->
-<!--                  </svg>-->
-<!--                </div>-->
-<!--                <div class="map_block__right_button">-->
-<!--                  <svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--                    <path d="M1.99991 2.00007L9.34302 9.34317L1.99991 16.6863" stroke="#F44A45" stroke-width="2.85" stroke-linecap="round" stroke-linejoin="round"/>-->
-<!--                  </svg>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            <div class="map_block__info_rows_block">-->
-<!--              <div class="map_block__info_row">-->
-<!--                <div class="map_block__country">-->
-<!--                  <img src="./static/usa_flag.svg">-->
-<!--                  <h4>USA</h4>-->
-<!--                </div>-->
-<!--                <div class="map_block__stat">-->
-<!--                  <h4>100,392</h4>-->
-<!--                  <svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--                    <path d="M9.34767 1.3828C9.94736 0.663167 11.0526 0.663167 11.6523 1.3828L19.9498 11.3397C20.7639 12.3167 20.0692 13.8 18.7974 13.8L2.20256 13.8C0.930805 13.8 0.236072 12.3167 1.05023 11.3397L9.34767 1.3828Z" fill="#F44A45"/>-->
-<!--                  </svg>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--              <div class="map_block__info_row">-->
-<!--                <div class="map_block__country">-->
-<!--                  <img src="./static/italy_flag.svg">-->
-<!--                  <h4>Italy</h4>-->
-<!--                </div>-->
-<!--                <div class="map_block__stat">-->
-<!--                  <h4>100,392</h4>-->
-<!--                  <svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--                    <path d="M9.34767 1.3828C9.94736 0.663167 11.0526 0.663167 11.6523 1.3828L19.9498 11.3397C20.7639 12.3167 20.0692 13.8 18.7974 13.8L2.20256 13.8C0.930805 13.8 0.236072 12.3167 1.05023 11.3397L9.34767 1.3828Z" fill="#F44A45"/>-->
-<!--                  </svg>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--              <div class="map_block__info_row">-->
-<!--                <div class="map_block__country">-->
-<!--                  <img src="./static/china_flag.svg">-->
-<!--                  <h4>China</h4>-->
-<!--                </div>-->
-<!--                <div class="map_block__stat">-->
-<!--                  <h4>100,392</h4>-->
-<!--                  <svg width="21" height="13" viewBox="0 0 21 13" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--                    <path d="M11.6523 12.4172C11.0526 13.1369 9.94736 13.1369 9.34767 12.4172L1.05023 2.46033C0.236074 1.48334 0.930808 5.10274e-05 2.20256 5.11386e-05L18.7974 5.25893e-05C20.0692 5.27005e-05 20.7639 1.48334 19.9498 2.46033L11.6523 12.4172Z" fill="#128E5A"/>-->
-<!--                  </svg>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--              <div class="map_block__info_row">-->
-<!--                <div class="map_block__country">-->
-<!--                  <img src="./static/spain_flag.svg">-->
-<!--                  <h4>Spain</h4>-->
-<!--                </div>-->
-<!--                <div class="map_block__stat">-->
-<!--                  <h4>100,392</h4>-->
-<!--                  <svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--                    <path d="M9.34767 1.3828C9.94736 0.663167 11.0526 0.663167 11.6523 1.3828L19.9498 11.3397C20.7639 12.3167 20.0692 13.8 18.7974 13.8L2.20256 13.8C0.930805 13.8 0.236072 12.3167 1.05023 11.3397L9.34767 1.3828Z" fill="#F44A45"/>-->
-<!--                  </svg>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--              <div class="map_block__info_row">-->
-<!--                <div class="map_block__country">-->
-<!--                  <img src="./static/germany_flag.svg">-->
-<!--                  <h4>Germany</h4>-->
-<!--                </div>-->
-<!--                <div class="map_block__stat">-->
-<!--                  <h4>100,392</h4>-->
-<!--                  <svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--                    <path d="M9.34767 1.3828C9.94736 0.663167 11.0526 0.663167 11.6523 1.3828L19.9498 11.3397C20.7639 12.3167 20.0692 13.8 18.7974 13.8L2.20256 13.8C0.930805 13.8 0.236072 12.3167 1.05023 11.3397L9.34767 1.3828Z" fill="#F44A45"/>-->
-<!--                  </svg>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--              <div class="map_block__info_row">-->
-<!--                <div class="map_block__country">-->
-<!--                  <img src="./static/iran_flag.svg">-->
-<!--                  <h4>Iran</h4>-->
-<!--                </div>-->
-<!--                <div class="map_block__stat">-->
-<!--                  <h4>100,392</h4>-->
-<!--                  <svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--                    <path d="M9.34767 1.3828C9.94736 0.663167 11.0526 0.663167 11.6523 1.3828L19.9498 11.3397C20.7639 12.3167 20.0692 13.8 18.7974 13.8L2.20256 13.8C0.930805 13.8 0.236072 12.3167 1.05023 11.3397L9.34767 1.3828Z" fill="#F44A45"/>-->
-<!--                  </svg>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
+      <div class="covid_map__wrapper">
+
+        <object id="map_svg" type="image/svg+xml" data="./static/world-map.svg"></object>
+
+        <div class="control_panel">
+          <div class="control_panel__title">
+            <h2>Live Reports</h2>
+            <div class="control_panel__title_buttons">
+              <div class="control_panel__left_button">
+                <svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.34311 16.6862L2 9.34311L9.34311 2" stroke="#A2A5B2" stroke-width="2.85" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="control_panel__right_button">
+                <svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.99991 2.00007L9.34302 9.34317L1.99991 16.6863" stroke="#F44A45" stroke-width="2.85" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="control_panel__content_wrapper">
+            <div id="usa_content_row" class="control_panel__content_row">
+              <div class="control_panel__country_info">
+                <img src="./static/usa_flag.svg">
+                <h4>USA</h4>
+              </div>
+              <div class="control_panel__stat_info">
+                <h4>100,392</h4>
+                <svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.34767 1.3828C9.94736 0.663167 11.0526 0.663167 11.6523 1.3828L19.9498 11.3397C20.7639 12.3167 20.0692 13.8 18.7974 13.8L2.20256 13.8C0.930805 13.8 0.236072 12.3167 1.05023 11.3397L9.34767 1.3828Z" fill="#F44A45"/>
+                </svg>
+              </div>
+            </div>
+            <div id="italy_content_row" class="control_panel__content_row">
+              <div class="control_panel__country_info">
+                <img src="./static/italy_flag.svg">
+                <h4>Italy</h4>
+              </div>
+              <div class="control_panel__stat_info">
+                <h4>86,498</h4>
+                <svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.34767 1.3828C9.94736 0.663167 11.0526 0.663167 11.6523 1.3828L19.9498 11.3397C20.7639 12.3167 20.0692 13.8 18.7974 13.8L2.20256 13.8C0.930805 13.8 0.236072 12.3167 1.05023 11.3397L9.34767 1.3828Z" fill="#F44A45"/>
+                </svg>
+              </div>
+            </div>
+            <div id="china_content_row" class="control_panel__content_row">
+              <div class="control_panel__country_info">
+                <img src="./static/china_flag.svg">
+                <h4>China</h4>
+              </div>
+              <div class="control_panel__stat_info">
+                <h4>81,340</h4>
+                <svg width="21" height="13" viewBox="0 0 21 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.6523 12.4172C11.0526 13.1369 9.94736 13.1369 9.34767 12.4172L1.05023 2.46033C0.236074 1.48334 0.930808 5.10274e-05 2.20256 5.11386e-05L18.7974 5.25893e-05C20.0692 5.27005e-05 20.7639 1.48334 19.9498 2.46033L11.6523 12.4172Z" fill="#128E5A"/>
+                </svg>
+              </div>
+            </div>
+            <div id="spain_content_row" class="control_panel__content_row">
+              <div class="control_panel__country_info">
+                <img src="./static/spain_flag.svg">
+                <h4>Spain</h4>
+              </div>
+              <div class="control_panel__stat_info">
+                <h4>64,059</h4>
+                <svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.34767 1.3828C9.94736 0.663167 11.0526 0.663167 11.6523 1.3828L19.9498 11.3397C20.7639 12.3167 20.0692 13.8 18.7974 13.8L2.20256 13.8C0.930805 13.8 0.236072 12.3167 1.05023 11.3397L9.34767 1.3828Z" fill="#F44A45"/>
+                </svg>
+              </div>
+            </div>
+            <div id="germany_content_row" class="control_panel__content_row">
+              <div class="control_panel__country_info">
+                <img src="./static/germany_flag.svg">
+                <h4>Germany</h4>
+              </div>
+              <div class="control_panel__stat_info">
+                <h4>50,871</h4>
+                <svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.34767 1.3828C9.94736 0.663167 11.0526 0.663167 11.6523 1.3828L19.9498 11.3397C20.7639 12.3167 20.0692 13.8 18.7974 13.8L2.20256 13.8C0.930805 13.8 0.236072 12.3167 1.05023 11.3397L9.34767 1.3828Z" fill="#F44A45"/>
+                </svg>
+              </div>
+            </div>
+            <div id="iran_content_row" class="control_panel__content_row">
+              <div class="control_panel__country_info">
+                <img src="./static/iran_flag.svg">
+                <h4>Iran</h4>
+              </div>
+              <div class="control_panel__stat_info">
+                <h4>32,332</h4>
+                <svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.34767 1.3828C9.94736 0.663167 11.0526 0.663167 11.6523 1.3828L19.9498 11.3397C20.7639 12.3167 20.0692 13.8 18.7974 13.8L2.20256 13.8C0.930805 13.8 0.236072 12.3167 1.05023 11.3397L9.34767 1.3828Z" fill="#F44A45"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <section id="contact" class="email_form">
-      <div class="email_form__title_box">
-        <div class="email_form__title">
-          <h2>Have Question in mind? Let us help you</h2>
-        </div>
+      <div class="email_form__title">
+        <h2>Have Question in mind? Let us help you</h2>
       </div>
       <div class="email_form__form_box">
         <form id="input_email">
@@ -346,12 +343,10 @@
     </section>
     <footer class="footer">
       <div class="footer__box">
-        <div class="logo_box">
-          <div class="logo_box__img">
-            <a class="logo_box__link" href="#"><img alt="covid" src="./static/logo.svg"></a>
-          </div>
-          <a class="logo_box__link" href="#"><h3>covid-19</h3></a>
-        </div>
+        <a class="logo_box__link" href="#">
+          <img class="logo_box__img" alt="covid_logo" src="./static/logo.svg">
+          <h3>covid-19</h3>
+        </a>
         <nav class="footer_nav">
           <ul class="nav__links">
             <li><a class="nav__link" href="#overview">Overview</a></li>
