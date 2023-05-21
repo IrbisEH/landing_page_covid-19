@@ -6,31 +6,31 @@ html {
     scroll-behavior: smooth;
 }
 h1 {
-    font-family: "Red Hat Text";
+    font-family: "Red Hat Text", serif;
     font-weight: 700;
     font-size: 40px;
     color: #035755;
 }
 h2 {
-    font-family: "Red Hat Text";
+    font-family: "Red Hat Text", serif;
     font-weight: 700;
     font-size: 30px;
     color: #035755;
 }
 h3 {
-    font-family: "Red Hat Text";
+    font-family: "Red Hat Text", serif;
     font-weight: 700;
     font-size: 20px;
     color: #035755;
 }
 h4 {
-    font-family: "gelion";
+    font-family: "gelion", serif;
     font-weight: 500;
     font-size: 20px;
     color: #035755;
 }
 p {
-    font-family: "gelion";
+    font-family: "gelion", serif;
     font-weight: 300;
     font-size: 18px;
     color: #4B4F51;

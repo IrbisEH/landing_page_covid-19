@@ -18,7 +18,7 @@ $(document).ready(function () {
             data: JSON.stringify({
                 email: email
             }),
-            success: function(response) {
+            success: function() {
                 console.log("email send to server")
             },
             error: function(error) {
