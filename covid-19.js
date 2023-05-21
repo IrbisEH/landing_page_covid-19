@@ -8,25 +8,25 @@ const countryIds = [
 
 ]
 
-// $(document).ready(function () {
-//     $("#send-email-btn").click(function () {
-//         const email = $("#email").val();
-//         $.ajax({
-//             type: "POST",
-//             url: "/send_covid_email",
-//             contentType: "application/json;charset=UTF-8",
-//             data: JSON.stringify({
-//                 email: email
-//             }),
-//             success: function(response) {
-//                 console.log("email send to server")
-//             },
-//             error: function(error) {
-//                 console.error(error);
-//             }
-//         })
-//     })
-// })
+$(document).ready(function () {
+    $("#send-email-btn").click(function () {
+        const email = $("#email").val();
+        $.ajax({
+            type: "POST",
+            url: "/send_covid_email",
+            contentType: "application/json;charset=UTF-8",
+            data: JSON.stringify({
+                email: email
+            }),
+            success: function(response) {
+                console.log("email send to server")
+            },
+            error: function(error) {
+                console.error(error);
+            }
+        })
+    })
+})
 
 window.addEventListener("load", () => {
 
@@ -52,10 +52,13 @@ window.addEventListener("load", () => {
         countriesData.push({
             "id":id,
             "panel_row": document.getElementById(id),
-            "map_parts": getMapPathEl(id, worldMapDoc)
         })
     }
-
+    if (worldMapDoc) {
+        for (let countryObj of countriesData) {
+            countryObj.map_parts = getMapPathEl(countryObj.id, worldMapDoc)
+        }
+    }
     for (let countryObj of countriesData) {
         countryObj.panel_row.style.transition = "background-color 0.2s ease-in-out";
         countryObj.panel_row.addEventListener("mouseover", ()=> {
@@ -65,14 +68,18 @@ window.addEventListener("load", () => {
         countryObj.panel_row.addEventListener("mouseleave", ()=> {
             changeObjStyleDeActive(countryObj);
         });
-        for (let item of countryObj.map_parts) {
-            item.style.transition = "fill 0.2s ease-in-out";
-            item.addEventListener("mouseover", () => {
-                changeObjStyleActive(countryObj);
-            })
-            item.addEventListener("mouseleave", () => {
-                changeObjStyleDeActive(countryObj);
-            })
+        if (worldMapDoc) {
+            for (let item of countryObj.map_parts) {
+                item.style.transition = "fill 0.2s ease-in-out";
+                item.addEventListener("mouseover", () => {
+                    clearAll(countriesData);
+                    changeObjStyleActive(countryObj);
+                })
+                item.addEventListener("mouseleave", () => {
+                    clearAll(countriesData);
+                    changeObjStyleDeActive(countryObj);
+                })
+            }
         }
     }
 
@@ -150,15 +157,19 @@ function getMapPathEl (id, parentEl) {
 
 function changeObjStyleActive (obj) {
     obj.panel_row.style.background = "#FFE1E2";
-    for (let item of obj.map_parts) {
-        item.style.fill = "#FB4C47";
+    if (obj.hasOwnProperty("map_parts")) {
+        for (let item of obj.map_parts) {
+            item.style.fill = "#FB4C47";
+        }
     }
 }
 
 function changeObjStyleDeActive (obj) {
     obj.panel_row.style.background = "none";
-    for (let item of obj.map_parts) {
-        item.style.fill = "#167C51";
+    if (obj.hasOwnProperty("map_parts")) {
+        for (let item of obj.map_parts) {
+            item.style.fill = "#167C51";
+        }
     }
 }
 
