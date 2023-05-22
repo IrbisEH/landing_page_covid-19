@@ -1159,6 +1159,30 @@ g path {
         top: 32%;
         left: 49%;
     }
+    #img_virus_1 {
+        width: 12%;
+        height: auto;
+        position: absolute;
+        z-index: -9999;
+        top: 6%;
+        left: 43%;
+    }
+    #img_virus_2 {
+        width: 5%;
+        height: auto;
+        position: absolute;
+        z-index: -9999;
+        top: 25%;
+        left: 65%;
+    }
+    #img_virus_3 {
+        width: 9%;
+        height: auto;
+        position: absolute;
+        z-index: -9999;
+        top: 5%;
+        left: 94%;
+    }
 }
 @media (max-width: 750px) {
     .nav__link {
@@ -1337,20 +1361,30 @@ g path {
     .prevention__img_block {
         display: none;
     }
-    .footer {
-        height: 130px;
-    }
-    .footer_social_box {
-        min-width: 130px;
-    }
-    .footer p {
-        font-size: 15px;
-    }
     .covid_map {
-        height: 360px;
-    }
-    .covid_map{
+        height: 400px;
         justify-content: center;
+    }
+    .control_panel {
+        height: 390px;
+        width: 380px;
+    }
+    .control_panel__title h2 {
+        font-size: 180%;
+    }
+    .control_panel__title_buttons {
+        height: 58%;
+        width: 27%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .control_panel__country_info h4 {
+        font-size: 150%;
+        padding-left: 26%;
+    }
+    .control_panel__stat_info h4 {
+        font-size: 135%;
     }
     #map_svg {
         display: none;
@@ -1382,7 +1416,7 @@ g path {
     }
     .input-container {
         position: relative;
-        width: 300px;
+        width: 380px;
         height: 70px;
         display: flex;
     }
@@ -1412,6 +1446,15 @@ g path {
         font-weight: 500;
         font-size: 17px;
         color: white;
+    }
+    .footer {
+        height: 130px;
+    }
+    .footer_social_box {
+        min-width: 130px;
+    }
+    .footer p {
+        font-size: 15px;
     }
     .popup {
         position: fixed;
@@ -1446,6 +1489,76 @@ g path {
         font-weight: 500;
         font-size: 17px;
         color: white;
+    }
+    #img_virus_1 {
+        width: 20%;
+        height: auto;
+        position: absolute;
+        z-index: -9999;
+        top: 4%;
+        left: 2%;
+    }
+    #img_virus_2 {
+        width: 15%;
+        height: auto;
+        position: absolute;
+        z-index: -9999;
+        top: 25%;
+        left: 80%;
+    }
+    #img_virus_3 {
+        width: 10%;
+        height: auto;
+        position: absolute;
+        z-index: -9999;
+        top: 5%;
+        left: 75%;
+    }
+}
+@media (max-width: 393px) {
+    .control_panel {
+        height: 390px;
+        width: 365px;
+    }
+    .input-container {
+        position: relative;
+        width: 365px;
+        height: 70px;
+        display: flex;
+    }
+}
+@media (max-width: 353px) {
+    .control_panel {
+        height: 390px;
+        width: 330px;
+    }
+    .input-container {
+        position: relative;
+        width: 330px;
+        height: 70px;
+        display: flex;
+    }
+}
+@media (max-width: 320px) {
+    .control_panel {
+        height: 390px;
+        width: 310px;
+    }
+    .control_panel__title h2 {
+        font-size: 150%;
+    }
+    .control_panel__country_info h4 {
+        font-size: 120%;
+        padding-left: 26%;
+    }
+    .control_panel__stat_info h4 {
+        font-size: 125%;
+    }
+    .input-container {
+        position: relative;
+        width: 310px;
+        height: 70px;
+        display: flex;
     }
 }
 

@@ -134,7 +134,20 @@ window.addEventListener("load", () => {
     popupCloseButton.addEventListener("click", () => {
         popup.style.display = "none"
     })
+
+    let lastWindowWidth = window.innerWidth;
+    let lastWindowHeight = window.innerHeight;
+    window.addEventListener('resize', function() {
+        if (window.innerWidth !== lastWindowWidth || window.innerHeight !== lastWindowHeight) {
+            console.log("w")
+            reloadPage();
+        }
+    });
 })
+
+function reloadPage() {
+    window.location.reload();
+}
 
 function scrollToBlock (block_name) {
     let targetBlock = document.getElementById(block_name);
